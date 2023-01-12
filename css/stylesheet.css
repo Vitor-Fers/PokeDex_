@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body{
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+}
+/*linear-gradient: aplica efeito degrade.*/
+
+main{
+    display: inline-block;
+    padding: 15px;
+    margin-top: 2%;
+    position: relative;
+}
+/*display inline-block: display em linha mas pode se alterar o height e width do elemento
+
+Position relative: Pode mover a posição do elemento livremente de acordo com sua posição inicial.
+*/
+
+.pokedex {
+    width: 100%;
+    max-width: 425px;
+}
+/*max-width: o elemento não pode passar dessa largura.*/
+
+/*direcionando o elemento pokemon*/
+.pokemon_image {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    height: 18%;
+    /*A função CSS translate() reposiciona um elemento na direção horizontal e/ou vertical. O seu resultado é um tipo de dado (x, y),
+    é referente a box da imagem.*/
+
+
+}
+/*
+position absolute:
+Deixa o elemento uma camada acima na tela e o elemento que esta abaixo sobe e ocupa o lugar dele, precisa de um elemento pai com relative aplicado para não ficar solto na tela*/
+
+.pokemon_data {
+    position:absolute;
+    font-weight: 600;/*peso da font*/
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+    
+    font-size: clamp(8px, 5vw, 25px);
+}
+/*
+font-size: clamp(min, desejavel, max):Ajusta o texto pra responsividade da tela.
+*/
+
+.pokemon_name {
+    color: #3a444d;
+    text-transform: capitalize;
+}
+
+.form {
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.input__search {
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+}
+
+.buttons{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%,0);
+    display:flex; 
+    gap: 20px;/*faz um espaçamaneto entre elementos.*/
+}
+
+
+button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+/*aplicando pseudo-class: active*/
+.button:active {
+
+    box-shadow: inset -4px 4px 0 #222;/*pra dar aquela sensação do button sendo afundado ao ser pressionado.*/
+    
+    
+    font-size: 0.9rem;/*dar aquela perspectiva de profundidade das letras quando button pressionado.*/
+}
